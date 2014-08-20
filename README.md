@@ -2,6 +2,8 @@ python-bing-bot
 ===============
 
 A bot for earning Bing Rewards on multiple accounts, written in Python.
+Supports earning mobile search points, and can automatically claim the 
+"Free Daily Point".
 
 This bot is based on work done on a Ruby project by TillerMiller.
 https://github.com/TillerMiller/BingBot
