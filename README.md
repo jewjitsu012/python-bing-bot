@@ -13,28 +13,28 @@ or hitting the iHeartQuotes API for a random quote.
 
 What you need:
 
-Google Chrome
-Selenium Webdriver (Python) - http://docs.seleniumhq.org/download/
-PyYAML - http://pyyaml.org
-Faker - https://pypi.python.org/pypi/Faker/0.0.4
+- Google Chrome
+- Selenium Webdriver (Python) : http://docs.seleniumhq.org/download/
+- PyYAML : http://pyyaml.org
+- Faker : https://pypi.python.org/pypi/Faker/0.0.4
 
 Unpack all archives and install them according to the directions given on each website.
 On OSX this usually entails
 
-cd /path/to/files
-sudo python setup.py install
+    cd /path/to/files
+    sudo python setup.py install
 
 Config Setup:
 Add email addresses to the config.yaml file as follows
 
-FACEBOOK_EMAIL:
- - emailAddress
-FACEBOOK_PASSWORD:
- - password
-OUTLOOK_EMAIL:
- - emailAddress
-OUTLOOK_PASSWORD:
- - password
+    FACEBOOK_EMAIL:
+    - emailAddress
+    FACEBOOK_PASSWORD
+     - password
+    OUTLOOK_EMAIL:
+     - emailAddress
+    OUTLOOK_PASSWORD:
+     - password
 
 Be mindful of the SPACE, DASH, SPACE before any config inputs
 List as many emails as necessary (Bing has a 5 account per IP/household limit)
@@ -43,5 +43,5 @@ List as many emails as necessary (Bing has a 5 account per IP/household limit)
 Usage
 Mac, Linux : 
 
-cd /path/to/PythonBingBot
-python PBB.py
+    cd /path/to/PythonBingBot
+    python PBB.py
