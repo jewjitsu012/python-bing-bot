@@ -16,11 +16,26 @@ or hitting the iHeartQuotes API for a random quote.
 What you need:
 
 - Google Chrome
+- The Google Chrome Driver Server * : http://chromedriver.storage.googleapis.com/index.html
 - Selenium Webdriver (Python) : http://docs.seleniumhq.org/download/
 - PyYAML : http://pyyaml.org
 - Faker : https://pypi.python.org/pypi/Faker/0.0.4
 
-Unpack all archives and install them according to the directions given on each website.
+The Chrome Driver Server is a separate piece of the Selenium Webdriver puzzle. This current
+bot build is running successfully on today's latest Chrome Driver version (2.10). Right now
+this can be found at http://chromedriver.storage.googleapis.com/index.html?path=2.10/
+
+For OSX please download the Linux 64 bit zip. The resulting file is called `chromedriver`. Please
+move this file to `/usr/bin`. On OSX you can use the keyboard shortcut `cmd+shift+g` to navigate
+to this directory (it is hidden by default). Moving the file here will require admin privileges.
+
+You could also do it from the command line:
+
+    cd /path/to/chromedriver
+    sudo mv chromedriver /usr/bin
+    
+
+Unpack all the other archives and install them according to the directions given on each website.
 On OSX this usually entails
 
     cd /path/to/files
