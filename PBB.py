@@ -22,11 +22,11 @@ def main(argv=None):
     	argv = sys.argv
 	set_working_directory()
 	print "Initializing desktop browser"
-	#desktopBrowser = webdriver.Chrome()
-	#desktopBrowser.set_window_size(1280,1024)
+	desktopBrowser = webdriver.Chrome()
+	desktopBrowser.set_window_size(1280,1024)
 	config = load_yaml_file('config.yaml')
-	#desktopBot = PBBDesktopBot.DesktopBot(desktopBrowser,config)
-	#desktopBot.begin_searching()
+	desktopBot = PBBDesktopBot.DesktopBot(desktopBrowser,config)
+	desktopBot.begin_searching()
 	options = webdriver.ChromeOptions()
 	options.add_argument('--user-agent=Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7')
 	mobileBrowser = webdriver.Chrome(chrome_options=options)

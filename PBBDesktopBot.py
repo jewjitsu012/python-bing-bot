@@ -38,7 +38,6 @@ class DesktopBot(object):
     def begin_searching(self):
         self.begin_outlook_searches()
         self.begin_facebook_searches()
-        #self.begin_outlook_searches()
         self.quit_browser()
 
     def begin_outlook_searches(self):
