@@ -46,7 +46,7 @@ Add email addresses to the config.yaml file as follows
 
     FACEBOOK_EMAIL:
     - emailAddress
-    FACEBOOK_PASSWORD
+    FACEBOOK_PASSWORD:
      - password
     OUTLOOK_EMAIL:
      - emailAddress
