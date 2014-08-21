@@ -53,8 +53,9 @@ Add email addresses to the config.yaml file as follows
     OUTLOOK_PASSWORD:
      - password
 
-Be mindful of the SPACE, DASH, SPACE before any config inputs
-List as many emails as necessary (Bing has a 5 account per IP/household limit)
+Be mindful of the SPACE, DASH, SPACE before any config inputs.
+
+List as many emails as necessary (Bing has a 5 account per IP/household limit, caveat emptor)
 
 
 Usage
