@@ -34,6 +34,11 @@ You could also do it from the command line:
     cd /path/to/chromedriver
     sudo mv chromedriver /usr/bin
     
+For some reason the chromedriver binary is difficult to get working. If you are having trouble please
+open an issue on this repository so we can crowdsource the solutions. I had trouble getting chromedriver
+to work initially. The error messages that selenium throws about problems point to a generic wiki, 
+https://code.google.com/p/selenium/wiki/ChromeDriver
+    
 
 Unpack all the other archives and install them according to the directions given on each website.
 On OSX this usually entails
