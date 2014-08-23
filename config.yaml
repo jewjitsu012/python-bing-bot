@@ -5,6 +5,11 @@
 #FIELD_NAME:
 # - ARGUMENT
 #############################################
+CHROMEDRIVER_PATH:
+# - /usr/bin/chromedriver # placeholder for Linux/Mac
+# - C:\chromedriver # placeholder for Windows
+# uncomment a line where you have saved the chromedriver
+# executable, or enter the absolute path for it
 FACEBOOK_EMAIL: 
  - facebook_address@facebook.com
 #- optional second email here [repeat as necessary]
