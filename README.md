@@ -34,6 +34,10 @@ You could also do it from the command line:
     cd /path/to/chromedriver
     sudo mv chromedriver /usr/bin
     
+You must also uncomment a line in the `config.yaml` file beneath the `CHROMEDRIVER_PATH:` line.
+On Linux or OSX take out the `#` in front of /usr/bin and on Windows the C:\chromedriver. You can 
+optionally set the absolute path if you prefer to store the chromedriver somewhere else.
+    
 For some reason the chromedriver binary is difficult to get working. If you are having trouble please
 open an issue on this repository so we can crowdsource the solutions. I had trouble getting chromedriver
 to work initially. The error messages that selenium throws about problems point to a generic wiki, 
