@@ -11,10 +11,10 @@ CHROMEDRIVER_PATH:
 # uncomment a line where you have saved the chromedriver
 # executable, or enter the absolute path for it
 FACEBOOK_EMAIL: 
- - facebook_address@facebook.com
+ - facebookemail@domain.com
 #- optional second email here [repeat as necessary]
 FACEBOOK_PASSWORD: 
- - facebook_email_password1
+ - facebookpassword
 # - password for second email [repeat as necessary]
 OUTLOOK_EMAIL: 
  - outlook_address@outlook.com
