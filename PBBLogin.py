@@ -42,7 +42,7 @@ class Login(object):
         print "Logging out mobile"
         self.browser.get('http://www.bing.com/rewards/dashboard')
         time.sleep(5)
-        self.browser.find_element_by_xpath('//*[@id="mbHeader"]/img').click()
+        self.browser.find_element_by_xpath('//*[@id="mbHeader"]/a[2]/img').click()
         time.sleep(5)
         self.browser.find_element_by_partial_link_text('Sign out').click()
         time.sleep(5)
