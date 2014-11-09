@@ -44,6 +44,8 @@ class Login(object):
         time.sleep(5)
         self.browser.find_element_by_xpath('//*[@id="mbHeader"]/a[2]/img').click()
         time.sleep(5)
+        self.browser.find_element_by_xpath('//*[@id="Account"]').click()
+        time.sleep(5)
         self.browser.find_element_by_partial_link_text('Sign out').click()
         time.sleep(5)
 
