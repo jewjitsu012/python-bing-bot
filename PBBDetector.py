@@ -14,6 +14,20 @@ class Detector(object):
         self.mobileMultiplier = 0
         self.desktopMultiplier = 0
 
+    def detect_total_credits(self):
+        elements = self.browser.find_elements_by_xpath('//*[@id="id_rc"]')
+        for element in elements:
+            print "Total Credits for this account: " + element.text
+            return element.text
+
+    def detect_total_mobile_credits(self):
+        self.browser.get('http://www.bing.com/rewards/dashboard')
+        time.sleep(5)
+        elements = self.browser.find_elements_by_xpath('//*[@id="id_rc"]')
+        for element in elements:
+            print "Total Credits for this account: " + element.text
+            return element.text
+
     def navigate_to_rewards_pane(self):
         print "Navigating to Rewards pane"
         self.browser.get('http://www.bing.com')
@@ -29,8 +43,9 @@ class Detector(object):
                 stringLength = len(element.text)
                 index = element.text.find(' of ')
                 startPoint = index + 4
+                creditsIndex = element.text.find(' credits')
                 progressNumber = element.text[element.text.find('-') + 1:element.text.find(' of ')]
-                totalNumber = element.text[startPoint:stringLength]
+                totalNumber = element.text[startPoint:creditsIndex]
                 self.mobileSearchMin = int(progressNumber)
                 self.mobileSearchMax = int(totalNumber)
         if self.mobileSearchMin < self.mobileSearchMax:
@@ -49,8 +64,9 @@ class Detector(object):
                 stringLength = len(element.text)
                 index = element.text.find(' of ')
                 startPoint = index + 4
+                creditsIndex = element.text.find(' credits')
                 progressNumber = element.text[element.text.find('-') + 1:element.text.find(' of ')]
-                totalNumber = element.text[startPoint:stringLength]
+                totalNumber = element.text[startPoint:creditsIndex]
                 self.desktopSearchMin = int(progressNumber)
                 self.desktopSearchMax = int(totalNumber)
         if self.desktopSearchMin < self.desktopSearchMax:

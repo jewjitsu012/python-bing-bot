@@ -21,6 +21,8 @@ class MobileBot(object):
         self.outlookPasswords = self.config['OUTLOOK_PASSWORD']    
         self.desktopSearchNumber = self.config['NUMBER_OF_DESKTOP_SEARCHES'][0]
         self.mobileSearchNumber = self.config['NUMBER_OF_MOBILE_SEARCHES'][0]
+        self.facebookCredits = []
+        self.outlookCredits = []
         self.detector = PBBDetector.Detector(withBrowser)
         self.searcher = PBBSearch.Search(withBrowser)
         self.generator = PBBSearchQueries.QueryGenerator()
@@ -40,6 +42,17 @@ class MobileBot(object):
             self.begin_outlook_searches()
         if len(self.facebookAccounts) > 0:
             self.begin_facebook_searches()
+
+        for q in range(0,len(self.outlookAccounts)):
+            account = self.outlookAccounts[q]
+            credit = self.outlookCredits[q]
+            print 'Credits for ' + account + ': ' + credit
+
+        for p in range(0,len(self.facebookAccounts)):
+            account = self.facebookAccounts[p]
+            credit = self.facebookCredits[p]
+            print 'Credits for ' + account + ': ' + credit
+
         self.quit_browser()
 
     def begin_outlook_searches(self):
@@ -63,6 +76,8 @@ class MobileBot(object):
             self.detector.detect_and_claim_free_offer()
             print self.detector.description()
             self.browser.get("http://www.bing.com")
+            credits = self.detector.detect_total_mobile_credits()
+            self.outlookCredits.append(credits)
             self.login.logout_from_mobile_bing()
             
         print "Finished with Outlook Searches"
@@ -88,5 +103,7 @@ class MobileBot(object):
             self.detector.detect_mobile_searches()
             print self.detector.description()
             self.browser.get("http://www.bing.com")
+            credits = self.detector.detect_total_mobile_credits()
+            self.facebookCredits.append(credits)
             self.login.logout_from_mobile_bing()
         print "Finished With Facebook Searches"
